@@ -1,9 +1,9 @@
-import CustomNavbar from "@/components/shared/CustomNavbar";
+import Banner from "@/components/modules/home/Banner";
 
 export default function Home() {
   return (
     <div>
-      <CustomNavbar />
+      <Banner />
     </div>
   );
 }

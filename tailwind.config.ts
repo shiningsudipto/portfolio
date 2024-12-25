@@ -17,6 +17,10 @@ export default withMT({
           200: "#25262A",
           300: "#1E1E1E",
         },
+        primary: {
+          DEFAULT: "#00d8ff",
+          200: "#25262A",
+        },
       },
     },
   },

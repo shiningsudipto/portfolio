@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
 "use client";
 import { Navbar, Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -41,10 +43,8 @@ const CustomNavbar = () => {
   }, []);
   return (
     <Navbar
-      className="mx-auto max-w-full rounded-none border-0 bg-black bg-opacity-100 px-6 py-3"
+      className="mx-auto max-w-full rounded-none border-0 bg-black bg-opacity-100 space-x py-3 shadow-none"
       placeholder=""
-      onPointerEnterCapture={() => {}}
-      onPointerLeaveCapture={() => {}}
     >
       <div className="flex items-center justify-between">
         <a href="#" className="text-xl font-bold">
@@ -62,8 +62,6 @@ const CustomNavbar = () => {
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
           placeholder=""
-          onPointerEnterCapture={() => {}}
-          onPointerLeaveCapture={() => {}}
         >
           {openNav ? (
             <XMarkIcon className="h-6 w-6" strokeWidth={2} />
