@@ -2,7 +2,10 @@ import avatar from "@/assets/sudipta-das.jpg";
 import Image from "next/image";
 const Banner = () => {
   return (
-    <div className="space-xy flex justify-between items-center bg-black h-[90vh]">
+    <div
+      id="banner"
+      className="space-xy flex justify-between items-center bg-black h-[90vh]"
+    >
       <div className="space-y-4">
         <h1 className="text-5xl">
           I&apos;m <span className="text-primary">Sudipta Das</span>

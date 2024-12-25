@@ -25,7 +25,7 @@ const About = () => {
   ];
 
   return (
-    <div className="bg-black space-y">
+    <div id="about" className="bg-black space-y">
       <div className="ps-24 flex justify-between gap-10">
         <div className="flex-1">
           <h2 className="text-4xl font-bold">About Me</h2>

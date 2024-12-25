@@ -7,11 +7,15 @@ import { useEffect, useState } from "react";
 
 const menuLinks = [
   {
-    path: "#",
+    path: "#about",
     label: "About",
   },
   {
-    path: "#",
+    path: "#experience",
+    label: "Experience",
+  },
+  {
+    path: "#contact",
     label: "Contact",
   },
 ];
@@ -21,7 +25,7 @@ function NavList() {
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {menuLinks.map((item, index) => (
         <li key={index}>
-          <a href="">{item.label}</a>
+          <a href={item.path}>{item.label}</a>
         </li>
       ))}
     </ul>
@@ -47,7 +51,7 @@ const CustomNavbar = () => {
       placeholder=""
     >
       <div className="flex items-center justify-between">
-        <a href="#" className="text-xl font-bold">
+        <a href="#home" className="text-xl font-bold">
           Sudipta <span className="font-medium">Das</span>
         </a>
         <div className="hidden lg:block">

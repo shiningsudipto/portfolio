@@ -21,7 +21,7 @@ const Experience = () => {
   ];
 
   return (
-    <div className="space-xy bg-black-200 flex gap-5">
+    <div id="experience" className="space-xy bg-black-200 flex gap-5">
       <h2 className="text-4xl font-bold">Experience</h2>
       <div className="mt-20 space-y-10 w-full">
         {experiences.map((experience, index) => (
