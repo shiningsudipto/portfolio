@@ -23,6 +23,9 @@ body {
 .space-x {
   @apply lg:px-24 px-4;
 }
+.space-y {
+  @apply lg:py-24 py-5;
+}
 .space-xy {
   @apply lg:p-24 p-4;
 }
