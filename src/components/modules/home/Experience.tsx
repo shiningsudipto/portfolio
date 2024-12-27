@@ -23,11 +23,11 @@ const Experience = () => {
   return (
     <div id="experience" className="space-xy bg-black-200 flex gap-5">
       <h2 className="text-4xl font-bold">Experience</h2>
-      <div className="mt-20 space-y-10 w-full">
+      <div className="mt-20 space-y-10 w-full font-poppins">
         {experiences.map((experience, index) => (
           <div key={index} className="grid grid-cols-7 gap-5">
             <div className="col-span-2">
-              <h3 className="text-2xl text-primary font-medium">
+              <h3 className="text-2xl text-primary font-medium font-poppins">
                 {experience.position}
               </h3>
               <h4 className="text-xl font-semibold">

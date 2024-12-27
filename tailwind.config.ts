@@ -19,8 +19,16 @@ export default withMT({
         },
         primary: {
           DEFAULT: "#00d8ff",
-          200: "#25262A",
+          200: "#1adcff",
+          300: "#33e0ff",
+          400: "#00d8ff",
+          500: "#00c2e6",
+          600: "#00adcc",
+          700: "#0097b3",
         },
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },
