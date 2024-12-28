@@ -1,31 +1,15 @@
-const Experience = () => {
-  const experiences = [
-    {
-      position: "Frontend Developer",
-      company: "Jayga",
-      companyUrl: "https://www.linkedin.com/company/jayga",
-      date: "Mar 1 2024",
-      current: true,
-      description:
-        "Jayga is a warehouse service provider offering storage solutions and inventory management based on storage grids. As the sole developer, my role involves designing user interfaces and implementing business logic to manage storage and inventory efficiently.",
-    },
-    {
-      position: "Intern React Developer",
-      company: "Kodezen Limited",
-      companyUrl: "https://www.linkedin.com/company/kodezenteam",
-      date: "Nov - Feb 2024",
-      current: false,
-      description:
-        "Kodezen Limited specializes in providing WordPress services, including innovative plugins to streamline business operations. As an intern, my role involved creating user interfaces with React and fixing UI-related bugs.",
-    },
-  ];
+import { fetchApi } from "@/actions/fetchApi";
+import { TExperience } from "@/types";
+
+const Experience = async () => {
+  const experienceData = await fetchApi("experience");
 
   return (
     <div id="experience" className="space-xy bg-black-200 flex gap-5">
       <h2 className="text-4xl font-bold">Experience</h2>
       <div className="mt-20 space-y-10 w-full font-poppins">
-        {experiences.map((experience, index) => (
-          <div key={index} className="grid grid-cols-7 gap-5">
+        {experienceData?.data.map((experience: TExperience) => (
+          <div key={experience?._id} className="grid grid-cols-7 gap-5">
             <div className="col-span-2">
               <h3 className="text-2xl text-primary font-medium font-poppins">
                 {experience.position}

@@ -1,29 +1,9 @@
+import { fetchApi } from "@/actions/fetchApi";
 import avatar from "@/assets/sudipta-das-transparent.png";
+import { TTechnology } from "@/types";
 import Image from "next/image";
-const About = () => {
-  const technologies = [
-    {
-      category: "Frontend",
-      items: ["React.js", "Next.js", "TypeScript", "TailwindCSS", "Bootstrap"],
-    },
-    {
-      category: "Backend",
-      items: ["Node.js", "Express.js", "Prisma", "JWT", "Mongoose"],
-    },
-    {
-      category: "Databases",
-      items: ["PostgreSQL", "MongoDB"],
-    },
-    {
-      category: "Tools",
-      items: ["Redux Toolkit", "RTK Query", "Zod", "AmarPay", "Stripe"],
-    },
-    {
-      category: "Extra Skills",
-      items: ["Graphic design (Photoshop, Illustrator)", "SEO"],
-    },
-  ];
-
+const About = async () => {
+  const technologies = await fetchApi("technology");
   return (
     <div id="about" className="bg-black space-y">
       <div className="ps-24 flex justify-between gap-10">
@@ -73,8 +53,8 @@ const About = () => {
             Key Technologies I Work With:
           </h3>
           <div className="space-y-2">
-            {technologies.map((tech, index) => (
-              <p key={index}>
+            {technologies?.data.map((tech: TTechnology) => (
+              <p key={tech?._id}>
                 <span className="text-lg font-semibold me-2 text-primary">
                   {tech.category}:
                 </span>
