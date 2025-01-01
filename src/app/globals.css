@@ -34,12 +34,16 @@ body {
   @apply lg:px-24 px-4;
 }
 .space-y {
-  @apply lg:py-24 py-5;
+  @apply lg:py-24 py-6;
 }
 .space-xy {
-  @apply lg:p-24 p-4;
+  @apply lg:p-24 p-6;
 }
 
 .primary-btn {
   @apply border-2 border-primary px-6 py-3 font-semibold text-primary hover:border-primary-600 rounded-md;
+}
+
+.heading {
+  @apply lg:text-4xl text-2xl font-bold text-center;
 }

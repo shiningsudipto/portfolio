@@ -9,7 +9,7 @@ const Blog = async () => {
   console.log(blogsData);
   return (
     <div id="blog" className="space-xy">
-      <h2 className="text-4xl font-bold text-center">Blogs</h2>
+      <h2 className="heading">Blogs</h2>
       <div className="grid lg:grid-cols-3 grid-cols-1 mt-10 gap-5">
         {blogsData?.data.map((item: TBlog) => (
           <div key={item?._id}>

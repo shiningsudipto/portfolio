@@ -22,8 +22,8 @@ const page = async ({ params }: PropsType) => {
 
   return (
     <main>
-      <section className="space-x py-10">
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 ">
+      <section className="space-x py-16">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
           <div className="col-span-2">
             <h1 className="text-2xl font-bold">{blogDetails?.title}</h1>
             <div className="flex items-center justify-between my-4">
