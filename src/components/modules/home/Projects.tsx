@@ -2,9 +2,9 @@ import { fetchApi } from "@/actions/fetchApi";
 import { TProject } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 const Projects = async () => {
   const projectsData = await fetchApi("project");
-  // console.log(projectsData);
 
   return (
     <div id="project" className="space-xy bg-black-300">
@@ -19,14 +19,20 @@ const Projects = async () => {
               width={400}
               className="rounded-md"
             />
-            <div>
-              <Link href={item?.slug}>
+            <div className="space-y-2 mt-4">
+              <Link href={`project/${item?.slug}`}>
                 <h3 className="text-lg font-semibold">{item?.title}</h3>
               </Link>
               <p>
                 <span className="font-semibold">Technology used:</span>{" "}
                 {item?.technology}
               </p>
+              <Link
+                href={`project/${item?.slug}`}
+                className="flex items-center gap-1 text-primary hover:border-b border-primary w-fit"
+              >
+                See details <MdKeyboardDoubleArrowRight className="text-xl" />{" "}
+              </Link>
             </div>
           </div>
         ))}

@@ -6,9 +6,8 @@ import Link from "next/link";
 
 const Blog = async () => {
   const blogsData = await fetchApi("blog");
-  console.log(blogsData);
   return (
-    <div id="blog" className="space-xy">
+    <div id="blog" className="space-xy bg-black">
       <h2 className="heading">Blogs</h2>
       <div className="grid lg:grid-cols-3 grid-cols-1 mt-10 gap-5">
         {blogsData?.data.map((item: TBlog) => (

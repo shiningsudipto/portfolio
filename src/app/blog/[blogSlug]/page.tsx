@@ -1,5 +1,4 @@
 import { fetchApi } from "@/actions/fetchApi";
-import Footer from "@/components/shared/Footer";
 import { TBlog } from "@/types";
 import { formatDate } from "@/utils/date";
 import Image from "next/image";
@@ -22,7 +21,7 @@ const page = async ({ params }: PropsType) => {
 
   return (
     <main>
-      <section className="space-x py-16">
+      <section className="space-x py-16 bg-black-300">
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-10">
           <div className="col-span-2">
             <h1 className="text-2xl font-bold">{blogDetails?.title}</h1>
@@ -65,7 +64,6 @@ const page = async ({ params }: PropsType) => {
           }}
         />
       </section>
-      <Footer />
     </main>
   );
 };

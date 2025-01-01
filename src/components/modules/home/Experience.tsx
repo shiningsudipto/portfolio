@@ -7,7 +7,7 @@ const Experience = async () => {
   return (
     <div
       id="experience"
-      className="space-xy bg-black-200 flex lg:flex-row flex-col gap-5"
+      className="space-xy bg-black flex lg:flex-row flex-col gap-5"
     >
       <h2 className="heading">Experience</h2>
       <div className="lg:mt-20 mt-0 space-y-10 w-full font-poppins">

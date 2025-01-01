@@ -29,6 +29,12 @@ const menuLinks = [
   },
 ];
 
+const handleOpenResume = () => {
+  const resumeLink =
+    "https://drive.google.com/file/d/1a5f0MxZG4LNepU6mNumzZ_ZVilg23jYE/view?usp=drive_link";
+  window.open(resumeLink, "_blank");
+};
+
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
@@ -37,7 +43,10 @@ function NavList() {
           <a href={item.path}>{item.label}</a>
         </li>
       ))}
-      <button className="border-2 border-primary py-2 rounded-md lg:hidden block">
+      <button
+        onClick={handleOpenResume}
+        className="border-2 border-primary py-2 rounded-md lg:hidden block"
+      >
         Download resume
       </button>
     </ul>
@@ -70,7 +79,10 @@ const CustomNavbar = () => {
           <NavList />
         </div>
         <div className="lg:block hidden">
-          <button className="font-semibold text-lg border-b-2 border-primary-600 hover:border-primary-700">
+          <button
+            onClick={handleOpenResume}
+            className="font-semibold text-lg border-b-2 border-primary-600 hover:border-primary-700"
+          >
             <span className="font-medium">Download</span>{" "}
             <span className="text-primary">Resume</span>
           </button>

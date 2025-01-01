@@ -5,7 +5,7 @@ import Image from "next/image";
 const About = async () => {
   const technologies = await fetchApi("technology");
   return (
-    <div id="about" className="bg-black space-y">
+    <div id="about" className="bg-black-300 space-y">
       <div className="lg:ps-24 lg:p-0 p-4 flex lg:flex-row flex-col justify-between gap-10">
         <div className="flex-1">
           <h2 className="heading">About Me</h2>
