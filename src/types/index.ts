@@ -35,3 +35,16 @@ export interface TTechnology {
   items: string[];
   __v: number;
 }
+
+export interface TBlog {
+  _id: string;
+  title: string;
+  slug: string;
+  content: string;
+  category: string;
+  author: string;
+  createdAt: string;
+  updatedAt: string;
+  __v: number;
+  cover: string;
+}

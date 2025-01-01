@@ -56,9 +56,9 @@ const About = async () => {
             {technologies?.data.map((tech: TTechnology) => (
               <p key={tech?._id}>
                 <span className="text-lg font-semibold me-2 text-primary">
-                  {tech.category}:
+                  {tech?.category}:
                 </span>
-                {tech.items.join(", ")}
+                {tech?.items}
               </p>
             ))}
           </div>

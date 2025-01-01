@@ -7,7 +7,7 @@ const Projects = async () => {
   // console.log(projectsData);
 
   return (
-    <div className="space-xy bg-black-300">
+    <div id="project" className="space-xy bg-black-300">
       <h2 className="text-4xl font-bold text-center">Projects</h2>
       <div className="grid grid-cols-3 mt-10 gap-5">
         {projectsData?.data.map((item: TProject) => (

@@ -4,15 +4,24 @@
 import { Navbar, Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 const menuLinks = [
+  {
+    path: "#project",
+    label: "Project",
+  },
+  {
+    path: "#experience",
+    label: "Experience",
+  },
   {
     path: "#about",
     label: "About",
   },
   {
-    path: "#experience",
-    label: "Experience",
+    path: "#blog",
+    label: "Blog",
   },
   {
     path: "#contact",
@@ -51,9 +60,9 @@ const CustomNavbar = () => {
       placeholder=""
     >
       <div className="flex items-center justify-between">
-        <a href="#home" className="text-xl font-bold">
+        <Link href="/" className="text-xl font-bold">
           Sudipta <span className="font-medium">Das</span>
-        </a>
+        </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>
