@@ -5,6 +5,7 @@ import { Navbar, Collapse, IconButton } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const menuLinks = [
   {
@@ -55,6 +56,8 @@ function NavList() {
 
 const CustomNavbar = () => {
   const [openNav, setOpenNav] = useState(false);
+  const pathname = usePathname();
+  const isRootPath = pathname === "/";
 
   const handleWindowResize = () =>
     window.innerWidth >= 960 && setOpenNav(false);
@@ -75,9 +78,11 @@ const CustomNavbar = () => {
         <Link href="/" className="text-xl font-bold">
           Sudipta <span className="font-medium">Das</span>
         </Link>
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
+        {isRootPath && (
+          <div className="hidden lg:block">
+            <NavList />
+          </div>
+        )}
         <div className="lg:block hidden">
           <button
             onClick={handleOpenResume}
@@ -101,9 +106,11 @@ const CustomNavbar = () => {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav}>
-        <NavList />
-      </Collapse>
+      {isRootPath && (
+        <Collapse open={openNav}>
+          <NavList />
+        </Collapse>
+      )}
     </Navbar>
   );
 };
