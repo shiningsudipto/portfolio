@@ -6,7 +6,7 @@ const Banner = () => {
       id="banner"
       className="space-xy flex lg:flex-row flex-col justify-between items-center bg-black lg:h-[90vh] gap-y-10"
     >
-      <div className="lg:space-y-4 space-y-2">
+      <div className="space-y-4">
         <h1 className="lg:text-5xl text-3xl">
           I&apos;m <span className="text-primary">Sudipta Das</span>
         </h1>
@@ -14,14 +14,14 @@ const Banner = () => {
         <h3 className="lg:text-xl text-lg font-medium">
           Passionate about crafting impactful web experiences.
         </h3>
-        <button>
+        <div className="">
           <a
             href="#contact"
             className="text-primary border-2 border-primary px-6 py-2 font-semibold"
           >
             Contact me
           </a>
-        </button>
+        </div>
       </div>
       <div className="flex justify-end">
         <Image
