@@ -83,28 +83,32 @@ const CustomNavbar = () => {
             <NavList />
           </div>
         )}
-        <div className="lg:block hidden">
-          <button
-            onClick={handleOpenResume}
-            className="font-semibold text-lg border-b-2 border-primary-600 hover:border-primary-700"
+        {isRootPath && (
+          <div className="lg:block hidden">
+            <button
+              onClick={handleOpenResume}
+              className="font-semibold text-lg border-b-2 border-primary-600 hover:border-primary-700"
+            >
+              <span className="font-medium">Download</span>{" "}
+              <span className="text-primary">Resume</span>
+            </button>
+          </div>
+        )}
+        {isRootPath && (
+          <IconButton
+            variant="text"
+            className="ml-auto h-6 w-6 text-primary hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            ripple={false}
+            onClick={() => setOpenNav(!openNav)}
+            placeholder=""
           >
-            <span className="font-medium">Download</span>{" "}
-            <span className="text-primary">Resume</span>
-          </button>
-        </div>
-        <IconButton
-          variant="text"
-          className="ml-auto h-6 w-6 text-primary hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
-          ripple={false}
-          onClick={() => setOpenNav(!openNav)}
-          placeholder=""
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
+            {openNav ? (
+              <XMarkIcon className="h-6 w-6" strokeWidth={2} />
+            ) : (
+              <Bars3Icon className="h-6 w-6" strokeWidth={2} />
+            )}
+          </IconButton>
+        )}
       </div>
       {isRootPath && (
         <Collapse open={openNav}>
