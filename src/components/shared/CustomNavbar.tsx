@@ -37,6 +37,9 @@ function NavList() {
           <a href={item.path}>{item.label}</a>
         </li>
       ))}
+      <button className="border-2 border-primary py-2 rounded-md lg:hidden block">
+        Download resume
+      </button>
     </ul>
   );
 }
@@ -66,12 +69,15 @@ const CustomNavbar = () => {
         <div className="hidden lg:block">
           <NavList />
         </div>
-        <div>
-          <button>Download Resume</button>
+        <div className="lg:block hidden">
+          <button className="font-semibold text-lg border-b-2 border-primary-600 hover:border-primary-700">
+            <span className="font-medium">Download</span>{" "}
+            <span className="text-primary">Resume</span>
+          </button>
         </div>
         <IconButton
           variant="text"
-          className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+          className="ml-auto h-6 w-6 text-primary hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
           placeholder=""

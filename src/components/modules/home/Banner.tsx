@@ -14,8 +14,13 @@ const Banner = () => {
         <h3 className="lg:text-xl text-lg font-medium">
           Passionate about crafting impactful web experiences.
         </h3>
-        <button className="text-primary border-2 border-primary px-6 py-2 font-semibold">
-          Contact me
+        <button>
+          <a
+            href="#contact"
+            className="text-primary border-2 border-primary px-6 py-2 font-semibold"
+          >
+            Contact me
+          </a>
         </button>
       </div>
       <div className="flex justify-end">
