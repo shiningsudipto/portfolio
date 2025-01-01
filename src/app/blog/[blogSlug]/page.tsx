@@ -12,7 +12,6 @@ const page = async ({ params }: PropsType) => {
   const { blogSlug } = await params;
   const { data } = await fetchApi(`blog/${blogSlug}`);
   const blogDetails = data as TBlog;
-  console.log(blogDetails);
   const firstSection = blogDetails?.content.split("<br>")[0];
   const contentAfterFirstBreak = blogDetails?.content
     .split("<br>")
