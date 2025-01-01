@@ -4,9 +4,7 @@ import { formatDate } from "@/utils/date";
 import Image from "next/image";
 
 type PropsType = {
-  params: {
-    projectSlug: string;
-  };
+  params: Promise<{ projectSlug: string }>;
 };
 
 const page = async ({ params }: PropsType) => {
