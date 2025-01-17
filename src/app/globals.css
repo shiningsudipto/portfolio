@@ -30,13 +30,13 @@ body {
 }
 
 .space-x {
-  @apply lg:px-24 px-4;
+  @apply lg:px-24 md:px-12 px-4;
 }
 .space-y {
-  @apply lg:py-24 py-6;
+  @apply lg:py-24 md:py-12 py-6;
 }
 .space-xy {
-  @apply lg:p-24 p-6;
+  @apply lg:p-24 md:p-12 p-6;
 }
 
 .primary-btn {

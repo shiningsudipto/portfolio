@@ -30,7 +30,7 @@ const Experience = async () => {
                 </a>
               </h4>
               <p>{experience.date}</p>
-              {experience.current && <p className="italic">Current</p>}
+              {experience.current && <p className="italic">Present</p>}
             </div>
             <div className="col-span-5 bg-black-300 p-5 flex-1 w-full">
               <p>{experience.description}</p>

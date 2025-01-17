@@ -17,7 +17,7 @@ const Contact = () => {
           </p>
           <p className="flex items-center gap-2 text-xl bg-black min-w-[320px] px-4 py-2 rounded-md">
             <TbPhone className="mb-1 text-2xl text-primary" />
-            <a href="tel:+8801758579417">01758579417</a>
+            <a href="tel:+8801758579417">+880 1758579417</a>
           </p>
         </div>
         <p className="flex items-center gap-2 text-xl bg-black min-w-[320px] py-2 px-4 rounded-md">

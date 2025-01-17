@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+      <body className={`antialiased mx-auto max-w-screen-ls bg-[#000]`}>
         <CustomNavbar />
         {children}
         <Footer />

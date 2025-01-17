@@ -1,11 +1,11 @@
 import avatar from "@/assets/sudipta-das.jpg";
 import Image from "next/image";
-import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 const Banner = () => {
   return (
     <div
       id="banner"
-      className="space-xy flex lg:flex-row flex-col justify-between items-center bg-black lg:h-[90vh] gap-y-10"
+      className="space-xy flex md:flex-row flex-col justify-between items-center bg-black lg:h-[90vh] gap-y-10"
     >
       <div className="">
         <h1 className="lg:text-5xl text-3xl">
@@ -22,6 +22,13 @@ const Banner = () => {
             className="text-primary hover:text-primary-600"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://www.facebook.com/shiningsudipto"
+            target="_blank"
+            className="text-primary hover:text-primary-600"
+          >
+            <FaFacebookSquare />
           </a>
           <a
             href="https://github.com/shiningsudipto"
@@ -46,7 +53,7 @@ const Banner = () => {
           width={350}
           src={avatar}
           alt="Avatar-sudipta-das-web-developer-shiningsudipto"
-          className="rounded-full size-[350px]"
+          className="rounded-full lg:size-[350px] md:size-[220px]"
         />
       </div>
     </div>
