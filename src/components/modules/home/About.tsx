@@ -1,5 +1,6 @@
 import { fetchApi } from "@/actions/fetchApi";
 import avatar from "@/assets/sudipta-das-transparent.png";
+import AnimatedHeading from "@/components/shared/AnimatedHeading";
 import { TTechnology } from "@/types";
 import Image from "next/image";
 const About = async () => {
@@ -8,7 +9,8 @@ const About = async () => {
     <div id="about" className="bg-black-300 space-y">
       <div className="lg:ps-24 lg:p-0  md:px-12 p-4 flex lg:flex-row flex-col justify-between gap-10">
         <div className="flex-1">
-          <h2 className="heading">About Me</h2>
+          <AnimatedHeading title={<h2 className="heading">About Me</h2>} />
+
           <div className="space-y-3 mt-5">
             <h6 className="text-lg font-semibold">Who I Am</h6>
             <p>

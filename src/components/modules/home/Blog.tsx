@@ -1,4 +1,5 @@
 import { fetchApi } from "@/actions/fetchApi";
+import AnimatedHeading from "@/components/shared/AnimatedHeading";
 import { TBlog } from "@/types";
 import { formatDate } from "@/utils/date";
 import Image from "next/image";
@@ -8,7 +9,7 @@ const Blog = async () => {
   const blogsData = await fetchApi("blog");
   return (
     <div id="blog" className="space-xy bg-black">
-      <h2 className="heading">Blogs</h2>
+      <AnimatedHeading title={<h2 className="heading">Blogs</h2>} />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-10 gap-5">
         {blogsData?.data.map((item: TBlog) => (
           <div key={item?._id}>

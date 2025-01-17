@@ -1,4 +1,5 @@
 import { fetchApi } from "@/actions/fetchApi";
+import AnimatedHeading from "@/components/shared/AnimatedHeading";
 import { TExperience } from "@/types";
 
 const Experience = async () => {
@@ -9,7 +10,8 @@ const Experience = async () => {
       id="experience"
       className="space-xy bg-black flex lg:flex-row flex-col gap-5"
     >
-      <h2 className="heading">Experience</h2>
+      <AnimatedHeading title={<h2 className="heading">Experience</h2>} />
+
       <div className="lg:mt-20 mt-0 space-y-10 w-full font-poppins">
         {experienceData?.data.map((experience: TExperience) => (
           <div

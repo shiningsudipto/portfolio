@@ -1,4 +1,5 @@
 import { fetchApi } from "@/actions/fetchApi";
+import AnimatedHeading from "@/components/shared/AnimatedHeading";
 import { TProject } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +9,7 @@ const Projects = async () => {
 
   return (
     <div id="project" className="space-xy bg-black-300">
-      <h2 className="heading">Projects</h2>
+      <AnimatedHeading title={<h2 className="heading">Projects</h2>} />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:mt-10 mt-5 gap-x-5 gap-y-10">
         {projectsData?.data.map((item: TProject) => (
           <div key={item?._id}>

@@ -1,4 +1,5 @@
 import avatar from "@/assets/sudipta-das.jpg";
+import AnimatedHeading from "@/components/shared/AnimatedHeading";
 import Image from "next/image";
 import { FaGithubSquare, FaLinkedin, FaFacebookSquare } from "react-icons/fa";
 const Banner = () => {
@@ -8,9 +9,13 @@ const Banner = () => {
       className="space-xy flex md:flex-row flex-col justify-between items-center bg-black lg:h-[90vh] gap-y-10"
     >
       <div className="">
-        <h1 className="lg:text-5xl text-3xl">
-          I&apos;m <span className="text-primary">Sudipta Das</span>
-        </h1>
+        <AnimatedHeading
+          title={
+            <h1 className="lg:text-5xl text-3xl">
+              I&apos;m <span className="text-primary">Sudipta Das</span>
+            </h1>
+          }
+        />
         <h2 className="lg:text-3xl text-2xl font-bold my-3">Web Developer</h2>
         <h3 className="lg:text-xl text-lg font-medium mb-4">
           Passionate about crafting impactful web experiences.
